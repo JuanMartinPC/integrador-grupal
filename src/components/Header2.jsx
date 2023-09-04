@@ -6,12 +6,12 @@ import Cart from "../img/Cart.svg"
 function Header(){
     return(
         <>
-        <div className="m_header">
-            <div>
+        <div className="header">
+            <div className="logo_search">
                 <h1><img src={Logo} alt="" /></h1>
                 <input type="text" placeholder="buscar" />
             </div>
-            <div className="search">
+            <div className="list">
                 <ul>
                     <li><a href="">Categorias</a></li>
                     <li><a href="">Hombre</a></li>
