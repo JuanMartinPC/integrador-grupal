@@ -1,0 +1,21 @@
+.register__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+}
+
+.register__section-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button{
+    background-color: #F20D0D;
+    color: white;
+}
