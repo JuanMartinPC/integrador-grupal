@@ -1,30 +1,36 @@
 import Logo from "../img/Logo.svg"
-import User from "../img/User.svg"
-import Cart from "../img/Cart.svg"
-
+import HeaderNav from "./HeaderNav"
+import "../styles/Header.css"
+import HeaderLink from "./HeaderLink"
+import Search from "./Search"
+import SearchBar from "./SearchBar"
 
 function Header(){
     return(
         <>
         <div className="header">
             <div className="logo_search">
-                <h1><img src={Logo} alt="" /></h1>
-                <input type="text" placeholder="buscar" />
+                <h1><a href=""><img src={Logo} alt="Axia"/></a></h1>
+                <span><input className="searchBar" type="text" placeholder="buscar" /></span>
+                <Search/>
             </div>
-            <div className="list">
-                <ul>
+            <div>{SearchBar}</div>
+            <div className="list_container">
+                <ul className="list">
                     <li><a href="">Categorias</a></li>
                     <li><a href="">Hombre</a></li>
                     <li><a href="">Mujer</a></li>
                     <li><a href="">Marcas</a></li>
                 </ul>
-            </div>
-            <div className="user">
-            <a href="">Usuario/registrarse <img src={User} alt="" /></a>
-            <a href=""><img src={Cart} alt="" /></a>
+                <ul className="user_list">
+                    <li><HeaderLink/></li>
+                </ul>
             </div>
         </div>
-        </>
+        <div>
+            <HeaderNav></HeaderNav>
+        </div>
+         </>
     )
 }
 
