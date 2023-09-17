@@ -1,9 +1,18 @@
-:root {
+.container {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+
+  :root {
     color: rgba(255, 255, 255, 0.87);
     background-color: #242424;
   }
-  
-  body {
+    
+body {
     margin: 0;
     padding: 0;
     place-items: center;
