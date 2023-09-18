@@ -23,7 +23,7 @@ function Home() {
                 <Order />
             </section>
             <section className='products__section'>
-                {productos.products.map((p) => (<Card p={p}/>))}
+                {productos.filter.length == 0? productos.products.map((p) => (<Card p={p}/>)) : productos.filter.map((p) => (<Card p={p}/>))}
             </section>
         </main>
         <Footer />
