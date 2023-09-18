@@ -22,17 +22,32 @@ export const Pagination = ({ productsPerPage, totalProducts, currentPage, setCur
 
     return (
         <nav className="pagination is-centered mb-6" role="navigation" aria-label="pagination">
-            {/* recordar validar mejor los botones */}
-            <button className={`pagination-previous ${currentPage === 1 ? 'disabled' : '' }`} onClick={onPreviousPage}>Anterior</button>
-            <button className={`pagination-next ${currentPage >= pageNumbers.length ? 'is-disabled' : ''}`} onClick={onNextPage}>Siguiente</button>
-            <ul className="pagination-list">
-
-                {pageNumbers.map(noPage => (
-                    <li key={noPage}>
-                        <a className={`pagination-link ${noPage === currentPage ? "is-current" : ""}`} onClick={() => onSpecificPage(noPage)}>{noPage}</a>
-                    </li>
-                ))}
-            </ul>
-        </nav>
-    );
+        {/* Validación del botón "Anterior" */}
+        <button
+            className={`pagination-previous ${currentPage === 1 ? 'disabled' : '' }`}
+            onClick={currentPage > 1 ? onPreviousPage : null} // Deshabilitar el botón si currentPage es 1
+        >
+            Anterior
+        </button>
+        {/* Validación del botón "Siguiente" */}
+        <button
+            className={`pagination-next ${currentPage >= pageNumbers.length ? 'is-disabled' : ''}`}
+            onClick={currentPage < pageNumbers.length ? onNextPage : null} // Deshabilitar el botón si currentPage es igual o mayor al número máximo de páginas
+        >
+            Siguiente
+        </button>
+        <ul className="pagination-list">
+            {pageNumbers.map(noPage => (
+                <li key={noPage}>
+                    <a
+                        className={`pagination-link ${noPage === currentPage ? "is-current" : ""}`}
+                        onClick={() => onSpecificPage(noPage)}
+                    >
+                        {noPage}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </nav>
+    )
 };
