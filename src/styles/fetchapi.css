@@ -1,0 +1,37 @@
+/* main{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+ */
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min-content; height: 500px;
+    row-gap: 12px;
+    box-shadow: 2px 5px 5px grey;
+}
+
+article h2{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+    overflow: hidden;
+}
+
+article p{
+    text-overflow: ellipsis;
+    height:80px;
+    overflow: hidden;
+}
+
+article img{
+    height: 250px;
+    width: 250px;
+}

@@ -1,0 +1,52 @@
+.cart__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5vh;
+    overflow-y: auto;
+    max-height: 60vh;
+    margin-top: 5vh;
+    padding: 20px 0;
+}
+
+.cart__list::-webkit-scrollbar-track{
+    background-color: red;
+}
+
+.cart__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2vh;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    width: 55vw;
+}
+
+h2{
+ text-align: center;
+}
+
+.btn__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15%;
+}
+
+button{
+    padding: 15px;
+    cursor: pointer;
+}
+
+.back__btn{
+    background-color: red;
+}
+
+.back__btn a{text-decoration: none; color: white;}
+
+.buy__btn{
+    background-color: green;
+    color: white;
+}

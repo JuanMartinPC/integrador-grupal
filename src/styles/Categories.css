@@ -1,0 +1,36 @@
+.dropdown {
+    display: inline-block;
+    position: relative;
+    width: 15vw;
+}
+
+.dropdown button{
+    background-color: transparent;
+    width: 15vw;
+}
+
+.dropdown__content {
+display: none;
+position: absolute;
+width: 100%;
+overflow: auto;
+}
+
+.dropdown:hover .dropdown__content {
+display: block;
+cursor: pointer;
+}
+
+.dropdown__content p {
+display: block;
+color: #000000;
+padding: 5px;
+text-decoration: none;
+background-color: #cfcece;
+}
+
+.dropdown__content > p:hover {
+color: #FFFFFF;
+background-color: rgb(250, 0, 0);
+cursor: pointer;
+}
