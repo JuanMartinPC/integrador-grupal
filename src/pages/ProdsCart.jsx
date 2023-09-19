@@ -17,8 +17,12 @@ function ProdsCart() {
         <ol id='productList' className='cart__list'>
             {selectedProducts.cart.map((prod) => (
             <li className='cart__item' key={prod.id}>
-                <h3>Product Title: {prod.title}</h3>
-                <h4>Price: ${prod.price}</h4>
+                  <h3>{prod.title.slice(0, 20)}</h3>
+                <div>
+                  <img alt={prod.title} src={prod.image} />
+                  <h4>Cantidad: {prod.quantity}</h4>
+                  <h4>Total por producto: ${prod.price}</h4>
+                </div>
             </li>))}
         </ol>
             <h2>Total: ${totalPrice(selectedProducts.cart)}</h2>

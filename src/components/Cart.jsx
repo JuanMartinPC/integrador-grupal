@@ -1,6 +1,5 @@
 import { useContext, useState } from "react"
 import ProductContext from "../context/ProductsContext";
-import { Link } from "react-router-dom";
 import { totalPrice } from "../utils/totalPrice";
 
 
@@ -10,7 +9,7 @@ function Cart (){
 
     return(
         <>  
-            {totalPrice(cartP.cart)}
+            {cartP.cart.length}
         </>
     )
 }
