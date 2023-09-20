@@ -1,37 +1,42 @@
-*{
-    margin: 0;
-    padding:0;
-    font-family: 'Ubuntu', sans-serif;
-}
 .footer{
-    width: 100vw;
     background-color: #9F9999;
 
     gap: 1.5rem;
-    padding: .5rem;
+    padding: 2rem 0;
+    margin-top: 5vh;
 
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
-
+    overflow: hidden;
 }
 .footer .footer_logo{
     max-width: 900px;
-    width: 100vw;
+    width: 100%;
     display: flex;
 
     justify-content: space-around;
     align-items: center;
+
+    @media(max-width:579px){
+        flex-direction: column;
+    }
 }
 .footer .footer_logo img{
     width: 150px;
 }
 .footer .footer_logo .footer_op{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
+
+    @media (max-width:755px){
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+    }
 
 }
 
@@ -43,6 +48,13 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    @media (max-width:755px){
+       max-width: 250px;
+    }
+    @media(max-width:675px){
+        align-items: center;
+        max-width: 400px;
+    }
 }
 .footer .footer_op .f_op_rt .f_b{
     background-color: red;
@@ -53,12 +65,17 @@
     width: 200px;
     font-weight: 600;
     font-size: small;
+    text-align: center;
 }
 
 .footer .footer_op .f_op_socials{
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    @media(max-width:675px){
+        align-items: center;
+        padding-top: .5rem;
+    }
 }
 .footer .footer_op .f_op_socials li{
     list-style-type: none;
@@ -71,7 +88,12 @@
 
 }
 .footer .copy p{
+    display: flex;
     max-width: 900px;
     font-size: small;
     font-weight: 300;
+
+    @media(max-width:700px){
+        max-width: 600px;
+    }
 }

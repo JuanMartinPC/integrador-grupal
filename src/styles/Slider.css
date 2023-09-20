@@ -1,0 +1,23 @@
+.slider__section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10vh;
+    overflow: hidden;
+    
+}
+
+.slider__items{
+    display: flex;
+    flex-direction: row;
+}
+
+.slider__img img{
+    width: 100vw;
+    max-height: 100vh;
+
+    @media(max-width:575px){
+        max-height:50vh;
+    }
+}
+

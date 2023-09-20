@@ -1,55 +1,82 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 .header{
-    padding: .5rem;
-    height: 150px;
-    width: 100vw;
-    background-color: #F20D0D;
-    display: flex;
-    align-items: center;
-    align-content: space-evenly;
-    flex-direction: column;
-    justify-content: space-evenly;
-    row-gap: 1rem;
-
-    top: 0;
-    position: sticky;
-    
-}
-.header .logo_search{
-    width: 100vw;
+    background-color: red;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    height: min-content;
+
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     justify-content: space-around;
+    align-items: center;
+    @media (max-width:575px){
+        flex-direction: column;
+    }
 }
-.header .searchBar{
-    height: 30px;
+.logo h1 img{
+    @media (max-width:575px){
+        width: 150px;
+    }
+}
+
+.logo .search input{
     border-radius: 20px;
+    height: 1.8em;
+    width: 25vw;
+    @media(max-width:575px){
+        width: auto;
+    }
 }
-.header .list_container{
-    width: 100vw;
+
+.search__button{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    left: -3rem;
+    top: 5px;
+    cursor: pointer;
+}
+
+.list{
+    display: flex;
+}
+
+.menu{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
-.header .list_container .list{
-    gap: 1rem;
+
+.menu__list, .user{
     list-style-type: none;
     display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    column-gap: 20px;
 }
-.header .list_container .list a{
-    padding:1rem;
-    margin:1rem;
+
+.menu__item a, .user a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
-.header .list_container .user_list a{
-    list-style: none;
-    padding: .5rem;
-    text-decoration: none;
-    color: white;
-}
+
+.menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
