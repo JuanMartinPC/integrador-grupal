@@ -39,6 +39,7 @@
     align-items: center;
     padding-right: 10px;
     box-sizing: border-box;
+    @media (max-width: 450px){flex-direction: column;}
 }
 
 h2{

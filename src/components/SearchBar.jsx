@@ -10,7 +10,7 @@ function SearchBar({ setSearchText }){
         <>
             <form>
                 <label htmlFor="buscar"></label>
-                <input id="searchBar" onChange={() => search(xd.value)} defaultValue='' type="text" name="buscar" placeholder="  Buscar..."/>
+                <input id="searchBar" onChange={() => search(xd.value)} defaultValue={undefined} type="text" name="buscar" placeholder="  Buscar..."/>
             </form>
         </>
     )

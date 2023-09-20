@@ -8,7 +8,6 @@ import '../styles/Cart.css'
 function ProdsCart() {
 
     const selectedProducts = useContext(ProductContext);
-    const listOfProds = document.getElementById('productList');
     const isItem = selectedProducts.cart.length < 1;
 
   return (

@@ -14,8 +14,7 @@ export const ProductContextProvider = ({children}) => {
                     cart[i].price += prod.price;}
             }
         }
-    }
-        
+    }        
 
     const [products, setProducts] = useState([]);
     const [filter, setFilter] = useState([])
@@ -27,7 +26,25 @@ export const ProductContextProvider = ({children}) => {
         } else setFilter(products.filter(c => c.category === cat))
     }
 
-    const [searchText, setSearchText] = useState('')
+    const [order, setOrder] = useState([])
+    const predOrder = products
+    const selectOrder = (ord) => {
+
+        console.log(order);
+        if (ord === 'Pred'){
+                setOrder(predOrder.sort((x, y) => x.id - y.id))                
+        }
+        else if (ord === 'MenorPrecio'){
+                const menorOrder = predOrder;
+                setOrder([menorOrder.sort((x, y) => x.price - y.price)])                 
+        }
+        else if (ord === 'MayorPrecio'){
+                const mayorOrder = predOrder;
+                setOrder([mayorOrder.sort((x, y) => y.price - x.price)])                
+        }}
+    
+
+    const [searchText, setSearchText] = useState(undefined)
     const [searchResults, setSearchResults] = useState([])
     const search = (text) => {
         setSearchText(text.toLowerCase()),
@@ -37,12 +54,12 @@ export const ProductContextProvider = ({children}) => {
     useEffect(() => {
       fetch("https://fakestoreapi.com/products")
       .then(res => res.json())
-      .then(data => setProducts(data),
-      )
+      .then(data => setProducts(data))
     }, [])
+    
 
     return (
-        <ProductContext.Provider value={{products, filter, searchResults, cart, addCart, selectCategory, search}}>
+        <ProductContext.Provider value={{products, filter, order, searchResults, cart, addCart, selectCategory, selectOrder, search}}>
             {children}
         </ProductContext.Provider>
     )

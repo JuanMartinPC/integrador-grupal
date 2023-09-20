@@ -2,15 +2,15 @@ import { useContext } from 'react';
 import '../styles/Categories.css'
 import ProductContext from '../context/ProductsContext';
 function Order() {
-
+  const { selectOrder } = useContext(ProductContext)
 
   return (
     <div class="dropdown">
       <button>Orden</button>
       <div class="dropdown__content">
-        <p>Predeterminado</p>
-        <p>Ascencente</p>
-        <p>Descendente</p>
+        <p onClick={() => selectOrder('Pred')} >Predeterminado</p>
+        <p onClick={() => selectOrder('MenorPrecio')} >Menor precio</p>
+        <p onClick={() => selectOrder('MayorPrecio')} >Mayor precio</p>
       </div>
     </div>
   )
