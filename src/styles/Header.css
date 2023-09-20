@@ -1,4 +1,4 @@
-.header{
+/* .header{
     background-color: red;
     display: flex;
     flex-direction: row;
@@ -55,3 +55,91 @@
     color: black;
 }
 
+ */
+
+ .header{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: min-content;
+
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    @media (max-width:575px){
+        flex-direction: column;
+    }
+}
+.logo h1 img{
+    @media (max-width:575px){
+        width: 150px;
+    }
+}
+
+.logo .search input{
+    border-radius: 20px;
+    height: 1.8em;
+    width: 25vw;
+    @media(max-width:575px){
+        width: auto;
+    }
+}
+
+.search__button{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    left: -3rem;
+    top: 5px;
+    cursor: pointer;
+}
+
+.list{
+    display: flex;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.menu__list, .user{
+    list-style-type: none;
+    display: flex;
+    column-gap: 20px;
+    @media(max-width:575px){
+        justify-content: space-between;
+        width: 80%;
+    }
+}
+
+.menu__item a, .user a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
