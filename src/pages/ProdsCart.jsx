@@ -13,6 +13,7 @@ function ProdsCart() {
   return (
     <>
         <Header />
+        <section className='cart__section'>
         <ol id='productList' className='cart__list'>
             {selectedProducts.cart.map((prod) => (
             <li className='cart__item' key={prod.id}>
@@ -27,9 +28,9 @@ function ProdsCart() {
             {isItem? <h2>Nada por aqui...</h2> : <h2>Total: ${totalPrice(selectedProducts.cart)}</h2>}
             <div className='btn__container'>
               <button className='back__btn'><Link to={-1}><h2>Atras</h2></Link></button>
-              {isItem? '' : <button className='buy__btn' ><h2>Comprar</h2></button>}
-              
+              {isItem? '' : <button className='buy__btn' ><h2>Comprar</h2></button>}              
             </div>
+        </section>
     </>
   )
 }

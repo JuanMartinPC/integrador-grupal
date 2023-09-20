@@ -8,7 +8,7 @@ function Order() {
     <div class="dropdown">
       <button>Orden</button>
       <div class="dropdown__content">
-        <p onClick={() => selectOrder('Pred')} >Predeterminado</p>
+        <p onClick={() => selectOrder('Asc')} >Predeterminado</p>
         <p onClick={() => selectOrder('MenorPrecio')} >Menor precio</p>
         <p onClick={() => selectOrder('MayorPrecio')} >Mayor precio</p>
       </div>

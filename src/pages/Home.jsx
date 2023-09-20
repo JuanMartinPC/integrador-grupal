@@ -17,24 +17,29 @@ function Home() {
         <Header />
         <Slider />
         <main>            
-            <section className='search__section'>
+            {/* <section className='search__section'>
                     <h2>Buscar:</h2>
                     <SearchBar />
-            </section>
+            </section> */}
             <section className='filter__section'>                
                 
                 <div className='filter__container'>
                     <h2>Filtrar por:</h2>
                     <div>
-                        <Categories />
                         <Order />
+                        <Categories />
                     </div>
                 </div>
                 
             </section>
             
-            <section className='products__section'>                
-                {searchResults.length > 0? searchResults.map((p)=> <Card p={p}/>) : order.length > 1? order.map((p) => (<Card p={p}/>)) : filter.length > 0? filter.map((p) => (<Card p={p}/>)) : products.map((p) => (<Card p={p}/>))}
+            <section className='products__section'>
+                {
+                /* searchResults.length > 0? searchResults.map((p) => (<Card p={p}/>)) : */
+                filter.length > 1? filter.map((p) => (<Card p={p}/>)):
+                order.length > 1? order.map((p) => (<Card p={p}/>)):
+                products.map((p) => (<Card p={p}/>))
+                }
             </section>
 
         </main>

@@ -19,10 +19,10 @@ export const ProductContextProvider = ({children}) => {
     const [products, setProducts] = useState([]);
     const [filter, setFilter] = useState([])
 
-    console.log(filter);
+    
     const selectCategory = (cat) => {
         if (cat === "default"){
-            setFilter(products)
+            setFilter([])
         } else setFilter(products.filter(c => c.category === cat))
     }
 
@@ -30,18 +30,19 @@ export const ProductContextProvider = ({children}) => {
     const predOrder = products
     const selectOrder = (ord) => {
 
-        console.log(order);
-        if (ord === 'Pred'){
-                setOrder(predOrder.sort((x, y) => x.id - y.id))                
+        if (ord === 'Asc'){
+                const menorOrder = predOrder;
+                setFilter([menorOrder.sort((x, y) => x.id - y.id)])                
         }
         else if (ord === 'MenorPrecio'){
                 const menorOrder = predOrder;
-                setOrder([menorOrder.sort((x, y) => x.price - y.price)])                 
+                setFilter([menorOrder.sort((x, y) => x.price - y.price)])                 
         }
         else if (ord === 'MayorPrecio'){
                 const mayorOrder = predOrder;
-                setOrder([mayorOrder.sort((x, y) => y.price - x.price)])                
-        }}
+                setFilter([mayorOrder.sort((x, y) => y.price - x.price)])                
+        }
+    }
     
 
     const [searchText, setSearchText] = useState(undefined)
