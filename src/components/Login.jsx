@@ -1,4 +1,5 @@
 import '../styles/Login.css';
+import { Link } from 'react-router-dom'
 
 function Login(){
     return (
@@ -10,9 +11,11 @@ function Login(){
 
                     <label htmlFor='password'>Contraseña: </label>
                     <input type='password' name='password'></input>
-
-                    <button type="submit">Iniciar sesión</button>
                 </form>
+                <article className='loginBtns'>
+                    <Link to='/'><button>Atras</button></Link>
+                    <button>Iniciar sesión</button>
+                </article>
             </section>
         </>
     )

@@ -3,8 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 100vw;
+    width: 100%;
 }
 
 .login__section-form{
@@ -12,10 +11,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
-button{
-    background-color: #F20D0D;
-    color: white;
+.loginBtns{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vh;
+    position: relative;
+    top: 30vh;
+    @media (max-width: 784px){
+        flex-direction: column;
+        top: 0;
+    }
+}
+
+.loginBtns button{
+    width: 15vw;
 }

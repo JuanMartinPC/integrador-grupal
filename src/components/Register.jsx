@@ -1,4 +1,5 @@
 import '../styles/Register.css';
+import { Link } from 'react-router-dom'
 
 function Register(){
 
@@ -30,8 +31,11 @@ function Register(){
                         </select>
                     </article>
 
-                    <button type="submit">Crear cuenta</button>
                 </form>
+                <article className='registerBtns'>
+                    <Link to='/'><button>Atras</button></Link>
+                    <button>Registrarse</button>
+                </article>
             </section>
         </>
     )

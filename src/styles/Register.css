@@ -3,8 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 100vw;
 }
 
 .register__section-form{
@@ -12,10 +10,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
-button{
-    background-color: #F20D0D;
-    color: white;
+
+.registerBtns{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vh; 
+    position: relative;
+    top: 9.3vh;
+    @media (max-width: 784px){
+        flex-direction: column;
+        top: 0;
+    }
+}
+
+.registerBtns button{
+    width: 15vw;
 }

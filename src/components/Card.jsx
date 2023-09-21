@@ -7,7 +7,7 @@ function Card({ p }){
     
     return(
         <>
-            <article key={p.id}>
+            <article className='product__card' key={p.id}>
                 <h2>{p.title}</h2>
                 <img src={p.image} alt={p.title}/>
                 <p>{p.description.slice(0,31)}</p>
