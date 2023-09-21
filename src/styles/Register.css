@@ -12,19 +12,38 @@
     align-items: center;
 }
 
+.register__section-form > input{
+    width: 100%;
+    height: 5vh;
+    border: 0px;
+    border-bottom: 2px solid black;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    &:focus{
+        transition: .2s all ease;
+        border-bottom: 2px solid red;
+        background-color: transparent;
+        outline: none;
+    }
+}
+
+
 
 .registerBtns{
     display: flex;
     flex-direction: row;
     column-gap: 5vh; 
     position: relative;
-    top: 9.3vh;
     @media (max-width: 784px){
-        flex-direction: column;
+        flex-direction: column-reverse;
+        row-gap: 2vh;
         top: 0;
     }
 }
 
 .registerBtns button{
     width: 15vw;
+    @media (max-width: 784px){
+        width: 100px;
+    }
 }

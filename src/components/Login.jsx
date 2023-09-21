@@ -11,11 +11,11 @@ function Login(){
 
                     <label htmlFor='password'>Contraseña: </label>
                     <input type='password' name='password'></input>
+                    <article className='loginBtns'>
+                        <Link to='/'><button>Atras</button></Link>
+                        <button>Iniciar sesión</button>
+                    </article>
                 </form>
-                <article className='loginBtns'>
-                    <Link to='/'><button>Atras</button></Link>
-                    <button>Iniciar sesión</button>
-                </article>
             </section>
         </>
     )

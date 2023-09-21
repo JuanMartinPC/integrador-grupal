@@ -30,12 +30,12 @@ function Register(){
                             <option value='value3'>Es privado</option>
                         </select>
                     </article>
+                    <article className='registerBtns'>
+                        <Link to='/'><button>Atras</button></Link>
+                        <button>Registrarse</button>
+                    </article>
 
                 </form>
-                <article className='registerBtns'>
-                    <Link to='/'><button>Atras</button></Link>
-                    <button>Registrarse</button>
-                </article>
             </section>
         </>
     )

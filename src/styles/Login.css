@@ -13,14 +13,30 @@
     align-items: center;
 }
 
+.login__section-form > input{
+    width: 70%;
+    height: 5vh;
+    border: 0px;
+    border-bottom: 2px solid black;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    &:focus{
+        transition: .2s all ease;
+        border-bottom: 2px solid red;
+        background-color: transparent;
+        outline: none;
+    }
+}
+
 .loginBtns{
     display: flex;
     flex-direction: row;
-    column-gap: 5vh;
+    column-gap: 10vh;
     position: relative;
-    top: 30vh;
+    bottom: 0px;
     @media (max-width: 784px){
-        flex-direction: column;
+        flex-direction: column-reverse;
+        row-gap: 2vh;
         top: 0;
     }
 }
